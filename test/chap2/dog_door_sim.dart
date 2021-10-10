@@ -11,9 +11,10 @@ void main() {
     remote.pressedButton();
 
     print('Fido has gone outside');
-    remote.pressedButton();
+    //  remote.pressedButton();
 
     print('Fido all done');
-    remote.pressedButton();
+    // remote.pressedButton();
+    print('Fido back inside');
   });
 }

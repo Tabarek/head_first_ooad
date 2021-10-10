@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:head_first_ooad/chap2/dog_door.dart';
 import 'package:head_first_ooad/chap2/remote.dart';
@@ -15,8 +17,15 @@ dogDoorFunc(BuildContext context) {
   remote.pressedButton();
 
   print('Fido has gone outside');
-  remote.pressedButton();
 
   print('Fido all done');
-  remote.pressedButton();
+  try {
+    sleep(Duration(seconds: 10));
+  } catch (e) {
+    print('Fido stuck outside');
+    print('Fido start barking');
+
+    print('Gina grape the remote control');
+    remote.pressedButton();
+  }
 }
